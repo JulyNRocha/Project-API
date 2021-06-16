@@ -1,0 +1,9 @@
+com\dev\projetoAPI\resources\SensorData.class
+com\dev\projetoAPI\resources\User.class
+com\dev\projetoAPI\resources\SensorDevice.class
+com\dev\projetoAPI\controller\MeasurementUnitController.class
+com\dev\projetoAPI\controller\dto\MeasurementUnitDto.class
+com\dev\projetoAPI\ProjetoAPIApplication.class
+com\dev\projetoAPI\resources\MeasurementUnit.class
+com\dev\projetoAPI\repository\MeasurementUnitRepository.class
+com\dev\projetoAPI\resources\DataStream.class

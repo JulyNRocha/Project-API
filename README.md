@@ -5,7 +5,7 @@ Implementado um serviço de Back End (com um modelo e persistência de dados) qu
 
 * Clone o repositorio 
 * Esteja usando JDK 1.8 e Maven 3.x
-* Baixe o e importe o banco de dados  ```projetoapi.sql``` para uma data base mySQL. 
+* Baixe e importe o banco de dados  ```projetoapi.sql``` para uma data base mySQL. 
 * Uma vez o banco funcionando no root e sem password você consegue rodar o serviço através de API Client(Postman,Insominia Rest...)
 
 ## Configuração do MySQL

@@ -12,7 +12,7 @@ Implementado um serviço de Back End (com um modelo e persistência de dados) qu
 
 ## Configuração do MySQL
 
-Dentro de ```application.propreties da aplicação```` as **configurações** estão assim:
+Dentro de ```application.propreties``` da aplicação as **configurações** estão assim:
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/projetoapi
 spring.datasource.username=root

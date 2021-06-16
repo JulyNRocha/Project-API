@@ -1,7 +1,9 @@
 # Projeto_API
 Este é um projeto de aplicação Java / Maven / Spring Boot (versão 2.5.0).
 
-Implementado um serviço de Back End (com um modelo e persistência de dados) que provê uma RESTFul API## Para rodar essa aplicação
+Implementado um serviço de Back End (com um modelo e persistência de dados) que provê uma RESTFul API
+
+## Para rodar essa aplicação
 
 * Clone o repositorio 
 * Esteja usando JDK 1.8 e Maven 3.x

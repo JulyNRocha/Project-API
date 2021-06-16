@@ -24,7 +24,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 O serviço permite cliente possa visualizar dispositivos e streams ativos, registrar novos dispositivos e vincular/registrar novas streams aos mesmos. Para as streams, é possível consultar o fluxo de dados que vai sendo publicado pelos sensores reais ao longo do tempo. A API permite interagir com duas entidades principais **dispositivos** ( ```SensorDevice ```) e **strams** (```DataStream```) através de mensagens em JSON.
 
-Ele utiliza relational database (MySQL). Uma vez conectado, você pode chamar os endpoints definips em ```com.dev.projetoAPI.controller``` em *port 8080*.
+Ele utiliza relational database (MySQL). Uma vez conectado, você pode chamar os endpoints definidos em ```com.dev.projetoAPI.controller``` em *port 8080*.
 
 Cadastrado previamente existe um usuario (```User```), o *user1*, com ele  você pode começar chamadando o endpoints ```{userName}/SensorDevices```  apartir dele você consegue visualizar as keys dos dispositivos e de suas streams  e dai fazer consultas ou registros especificos nos outros endpoints operaçionais(veja a lista completa abaixo).
  
@@ -42,7 +42,7 @@ http://localhost:8080/DataStream/{stream key}
 ### [POST] Registrar dispositivo
 
 ```
-POST http://localhost:8080/{userName}/SensorDevices
+POST http://localhost:8080/user1/SensorDevices
 Accept: application/json
 Content-Type: application/json
 

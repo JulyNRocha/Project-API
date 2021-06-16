@@ -1,14 +1,14 @@
 # Projeto_API
 Este é um projeto de aplicação Java / Maven / Spring Boot (versão 2.5.0).
 
-Implementado um serviço de Back End (com um modelo e persistência de dados) que provê uma RESTFul API
+Implementado um serviço de Back End (com um modelo e persistência de dados) que provê uma RESTFul API.
 
 ## Para rodar essa aplicação
 
 * Clone o repositorio 
-* Esteja usando JDK 1.8 e Maven 3.x
+* Esteja usando JDK 1.8 e Maven 3.x.
 * Baixe e importe o banco de dados  ```projetoapi.sql``` para uma data base mySQL. 
-* Uma vez o banco funcionando no root e sem password você consegue rodar o serviço através de API Client(Postman,Insominia Rest...)
+* Uma vez o banco funcionando no root e sem password você consegue rodar o serviço através de API Client(Postman,Insominia Rest...).
 
 ## Configuração do MySQL
 
@@ -89,4 +89,4 @@ Location header: http://localhost:8091/DataStream/{stream_id}/SensorData
 
 ### Para ver documentação Swagger 2 API 
 
-Dê Run no server e busque por localhost:8080/swagger-ui.html ```localhost:8080/swagger-ui.html```
+Dê Run no server e busque por localhost:8080/swagger-ui.html ```localhost:8080/swagger-ui.html```.

@@ -62,7 +62,8 @@ public class DataStreamController {
 
 	//Swagger
 	@ApiOperation(value = "Registrar Stream (DataStream) para Dispositivo (SensorDevice) apartirar da Key do Dispositivo")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Registro de Stream (DataStream) criado com sucesso"),
+	@ApiResponses(value = { 
+			@ApiResponse(code = 200, message = "Registro de Stream (DataStream) criado com sucesso"),
 			@ApiResponse(code = 404, message = "Dispositivo (SensorDevice) com essa Key não foi encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
 	//[POST] Data Stream

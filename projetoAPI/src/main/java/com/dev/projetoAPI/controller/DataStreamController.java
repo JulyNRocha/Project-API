@@ -66,7 +66,7 @@ public class DataStreamController {
 			@ApiResponse(code = 404, message = "Dispositivo (SensorDevice) com essa Key não foi encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
 	//[POST] Data Stream
-	@PostMapping(value = "/SensorDevice/{device_key}/DataStream", consumes = "application/json")
+	@PostMapping(value = "/SensorDevice/{device_key}/DataStream", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<DataStreamDto> register(@PathVariable String device_key, @RequestBody @Valid DataStreamForm form,
 			UriComponentsBuilder uriBuilder) {
 

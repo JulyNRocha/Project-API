@@ -3,6 +3,8 @@ package com.dev.projetoAPI.controller;
 import java.net.URI;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,13 +35,15 @@ public class SensorDataController {
 	@Autowired
 	private DataStreamRepository dataStreamRepository;
 
+	//Swagger
 	@ApiOperation(value = "Publicar medição (SensorData) em uma Stream (DataStream)")
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Medição Coletada com sucesso"),
 			@ApiResponse(code = 404, message = "Stream (DataStream) com essa Key não foi encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
+	//[POST] Sensor Data
 	@PostMapping(value = "/DataStream/{stream_key}/SensorData", produces = "application/json")
-	public ResponseEntity<SensorDataDto> collect(@PathVariable String stream_key, @RequestBody SensorDataForm form,
+	public ResponseEntity<SensorDataDto> collect(@PathVariable String stream_key, @RequestBody @Valid SensorDataForm form,
 			UriComponentsBuilder uriBuilder) {
 
 		Optional<DataStream> dataStream = dataStreamRepository.findByStreamKey(stream_key);

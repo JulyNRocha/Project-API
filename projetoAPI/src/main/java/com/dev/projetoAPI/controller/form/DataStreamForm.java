@@ -1,8 +1,9 @@
 package com.dev.projetoAPI.controller.form;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Positive;
 
 import com.dev.projetoAPI.model.DataStream;
 import com.dev.projetoAPI.model.MeasurementUnit;
@@ -16,7 +17,8 @@ public class DataStreamForm {
 	private String label;
 
 	@NotNull
-	@PositiveOrZero
+	@Positive
+	@Max(5)
 	private int unitId;
 
 	public String getLabel() {

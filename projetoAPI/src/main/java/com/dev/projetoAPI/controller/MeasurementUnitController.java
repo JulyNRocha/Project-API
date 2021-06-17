@@ -25,10 +25,12 @@ public class MeasurementUnitController {
 	@Autowired
 	private MeasurementUnitRepository measurementUnitRepository;
 
+	//Swagger
 	@ApiOperation(value = "Consultar unidades de medida (MeasurementUnit)")
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Retorno da Lista de Unidades de Medida (Measure Unit)"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
+	//[GET] Measurement Unit
 	@GetMapping
 	@Cacheable(value = "units")
 	public List<MeasurementUnitDto> lista() {

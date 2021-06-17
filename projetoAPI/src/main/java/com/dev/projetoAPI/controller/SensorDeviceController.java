@@ -37,12 +37,14 @@ public class SensorDeviceController {
 
 	@Autowired
 	private UserRepository userRepository;
-
+	
+	//Swagger
 	@ApiOperation(value = "Consultar dispositivos (SensorDevice) de um Usuário (User)")
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Retorna a lista de dispositivos (SensorDevice)"),
 			@ApiResponse(code = 404, message = "User com esse userName não encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno")})
+	//[GET] Sensor Devices
 	@GetMapping(value = "{userName}/SensorDevice", produces = "application/json")
 	public ResponseEntity<List<SensorDeviceDto>> getSensorDeviceslist(@PathVariable String userName) {
 
@@ -57,11 +59,13 @@ public class SensorDeviceController {
 		return ResponseEntity.notFound().build();
 	}
 
+	//Swagger
 	@ApiOperation(value = "Registrar dispositivo (SensorDevice) de um usuario (User)")
 	@ApiResponses(value = {
 			@ApiResponse(code = 201, message = "Resgistro de dispositivo (SensorDevice) criado com Sucesso"),
 			@ApiResponse(code = 404, message = "Usario com esse user name não encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno") })
+	//[POST] Sensor Device
 	@PostMapping(value = "{userName}/SensorDevice", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<SensorDeviceDto> sensorDeviceRegister(@PathVariable String userName,
 			@RequestBody @Valid SensorDeviceForm form, UriComponentsBuilder uriBuilder) {
@@ -77,11 +81,13 @@ public class SensorDeviceController {
 		return ResponseEntity.notFound().build();
 	}
 
+	//Swagger
 	@ApiOperation(value = "Consulta de um dispositivo (SensorDevice) específico apartir de uma Key de dispositivo")
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Retorna o sensores (SensorDevice) a partir da key"),
 			@ApiResponse(code = 404, message = "Dispositivo (SensorDevice) com essa Key não foi encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
+	//[GET] Detailed Sensor Device
 	@GetMapping(value = "/SensorDevice/{device_key}", produces = "application/json")
 	public ResponseEntity<ItemizedSensorDeviceDto> getSensorDeviceByDeviceKey(@PathVariable String device_key) {
 

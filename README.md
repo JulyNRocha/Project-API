@@ -89,4 +89,4 @@ Location header: http://localhost:8091/DataStream/{stream_id}/SensorData
 
 ### Para ver documentação Swagger 2 API 
 
-Dê Run no server e busque por localhost:8080/swagger-ui.html ```localhost:8080/swagger-ui.html```.
+Dê Run no server e busque por ```localhost:8080/swagger-ui.html```.

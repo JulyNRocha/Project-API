@@ -43,7 +43,8 @@ public class DataStreamController {
 
 	//Swagger
 	@ApiOperation(value = "Consulta de dados de um Stream (DataStream) específico apartirar de sua Key")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Retorno do (DataStream) específico"),
+	@ApiResponses(value = { 
+			@ApiResponse(code = 200, message = "Retorno do (DataStream) específico"),
 			@ApiResponse(code = 404, message = "Stream de dados (DataStream) com essa Key não foi encontrado"),
 			@ApiResponse(code = 500, message = "Erro interno"), })
 	//[GET] Data Stream

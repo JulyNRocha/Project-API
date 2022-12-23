@@ -1,18 +1,18 @@
-# Projeto_API
-Este é um projeto de aplicação Java / Maven / Spring Boot (versão 2.5.0).
+# Project_API
+This is a Java application project / Maven / Spring Boot (version 2.5.0).
 
-Implementado um serviço de Back End (com um modelo e persistência de dados) que provê uma RESTFul API.
+Implemented a Back End service (with a model and data persistence) that provides a restful API.
 
-## Para rodar essa aplicação
+## To run this application
 
-* Clone o repositorio.
-* Esteja usando JDK 1.8 e Maven 3.x.
-* Baixe e importe o banco de dados  ```projetoapi.sql``` para uma data base mySQL. 
-* Uma vez o banco funcionando no root e sem password você consegue rodar o serviço através de API Client(Postman,Insominia Rest...).
+* Clone the repository.
+* Be using JDK 1.8 and Maven 3.x.
+* Download and import the database  ```projectoapi.sql``` to a mysql base data. 
+* Once the bank is working in root and without password you can run the service through API Client (Postman,Insominia Rest...).
 
-## Configuração do MySQL
+## Configuration of MySQL
 
-Dentro de ```application.propreties``` da aplicação as **configurações** estão assim:
+Within ```application.propreties``` of the application the **settings** look like this:
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/projetoapi
 spring.datasource.username=root
@@ -20,17 +20,17 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=update 
 ```
 
-## Sobre o Serviço
+## About the Service
 
-O serviço permite que o cliente possa visualizar dispositivos e streams ativos, registrar novos dispositivos e vincular/registrar novas streams aos mesmos. Para as streams, é possível consultar o fluxo de dados que vai sendo publicado pelos sensores reais ao longo do tempo. A API permite interagir com duas entidades principais, dispositivos (```SensorDevice```) e streams (```DataStream```) através de mensagens em JSON.
+The service allows the customer to view active devices and streams, register new devices and link/register new streams to them. For the streams, it is possible to query the data flow that is being published by the real sensors over time. The API allows interacting with two main entities, devices (```SensorDevice```) and streams (```Datastream````) via JSON messages.
 
-Ele utiliza relational database (MySQL). Uma vez conectado, você pode chamar os endpoints definidos em ```com.dev.projetoAPI.controller``` em *port 8080*.
+It uses Relational database (MySQL). Once connected, you can call the endpoints defined in ```com.dev.projectAPI.controller```` in *port 8080*.
 
-Cadastrado previamente existe um usuario (User), o user1, com ele você pode começar chamando o endpoint {userName}/SensorDevices. A partir dele você consegue visualizar as keys dos dispositivos e de suas streams, e dai fazer consultas ou registros específicos nos outros endpoints operacionais (veja a lista completa abaixo).
+Previously registered there is a user (User), the user1, with it you can start by calling the endpoint {username}/SensorDevices. From it you can view the Keys of the devices and their streams, and then make specific queries or records on the other operational endpoints (see the full list below).
  
-Aqui estão alguns **endpoints** que você pode chamar:
+Here are some **endpoints** you can call:
 
-### [GET] Consultar sobre unidades de medidas, dispositivos, dados de um Stream, etc.
+### [GET] Query about units of measurement, devices, data from a Stream, etc.
 
 ```
 http://localhost:8090/MeasureUnit
@@ -39,7 +39,7 @@ http://localhost:8080/SensorDevices/{device key}
 http://localhost:8080/DataStream/{stream key}
 ```
 
-### [POST] Registrar dispositivo
+### [POST] Register device
 
 ```
 POST http://localhost:8080/user1/SensorDevices
@@ -87,6 +87,6 @@ RESPONSE: HTTP 201 (Created)
 Location header: http://localhost:8091/DataStream/{stream_id}/SensorData
 ```
 
-### Para ver documentação Swagger 2 API 
+### To see documentation Swagger 2 API 
 
-Dê Run no server e busque por ```localhost:8080/swagger-ui.html```.
+Run the server and search for ```localhost:8080/swagger-ui.html```.
